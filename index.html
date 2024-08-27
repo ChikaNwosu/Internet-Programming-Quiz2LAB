@@ -33,7 +33,7 @@ Instructor: Washington Valencia
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/x-icon"
 		href="https://canvascctb.s3.ca-central-1.amazonaws.com/account_1/attachments/95/CCTB_favicon.ico" />
-
+		<script src="/-Quiz-2-IST107-CCTB/js/scriptquiz2.js" defer></script>
 
 </head>
 
@@ -149,8 +149,7 @@ Instructor: Washington Valencia
 
 									<a class="nav-link" href="#" data-bs-toggle="dropdown" aria-haspopup="true"
 										aria-expanded="false" id="mainNavHosting">
-										<h3>Quiz #2 - IST 107 - <span class="text-danger">{{Replace with your Full
-												Name}}</span>
+										<h3>Quiz #2 - IST 107 - <span class="text-danger" id="fullNamePlaceholder">Chikaodili Bridget-Mary Nwosu</span>
 										</h3>
 									</a>
 
@@ -189,6 +188,7 @@ Instructor: Washington Valencia
 					</nav>
 
 				</div>
+							
 				<!-- /Navbar -->
 
 			</div>
@@ -221,8 +221,8 @@ Instructor: Washington Valencia
 							</p><br><br>
 
 							<div class="mt-15 text-muted">
-								<h2>{{Replace with current date}} </h2>
-								<h2>{{Replace with your email}} </h2>
+								<p>Date: <span id="currentDate">August 26th, 2024.</span></p>
+                                <p>Email: <span id="studentEmail">chikaodili.nwosu@gmail.com</span></p>
 							</div>
 
 						</div>
@@ -251,51 +251,38 @@ Instructor: Washington Valencia
 
 		<!-- DOMAINS BAR -->
 		<div class="container py-5">
-
 			<div class="row g-4 col-border text-center text-muted">
-
 				<div class="col-6 col-md-3">
-
 					<h2 class="h5 mb-1">
-						<span class="text-primary fw-bold">HTTP</span> <span class="fw-light">protocol</span>
+						<span class="text-primary fw-bold">HTTP</span> 
+						<span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / Layer 7</p>
-
+					<p class="m-0" id="httpPort">80 port / Layer 7</p>
 				</div>
-
-
 				<div class="col-6 col-md-3">
-
 					<h2 class="h5 mb-1">
-						<span class="text-danger fw-bold">HTTPS</span> <span class="fw-light">protocol</span>
+						<span class="text-danger fw-bold">HTTPS</span> 
+						<span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / Layer 7</p>
-
+					<p class="m-0" id="httpsPort">443 port / Layer 7</p>
 				</div>
-
-
 				<div class="col-6 col-md-3">
-
 					<h2 class="h5 mb-1">
-						<span class="text-warning fw-bold">SSH</span> <span class="fw-light">protocol</span>
+						<span class="text-warning fw-bold">SSH</span> 
+						<span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / layer 7</p>
-
+					<p class="m-0" id="sshPort">22 port / Layer 7</p>
 				</div>
-
-
 				<div class="col-6 col-md-3">
-
 					<h2 class="h5 mb-1">
-						<span class="text-success fw-bold">DNS</span> <span class="fw-light">protocol</span>
+						<span class="text-success fw-bold">DNS</span> 
+						<span class="fw-light">protocol</span>
 					</h2>
-					<p class="m-0">xx port / layer 7</p>
-
+					<p class="m-0" id="dnsPort">53 port / Layer 7</p>
 				</div>
-
 			</div>
-
 		</div>
+		
 		<!-- /DOMAINS BAR -->
 
 
@@ -508,8 +495,9 @@ Instructor: Washington Valencia
 						</div>
 
 						<div class="text-align-end">
-							<a href="#" class="btn btn-primary btn-soft">How many items would you like in
-								the list?</a>
+							<button id="itemButton" class="btn btn-primary">How many items would you like in the list?</button>
+    						<ul id="itemList" class="mt-4"></ul>
+
 						</div>
 
 					</div>
@@ -519,8 +507,7 @@ Instructor: Washington Valencia
 			</div>
 		</div>
 
-
-
+		
 
 
 
